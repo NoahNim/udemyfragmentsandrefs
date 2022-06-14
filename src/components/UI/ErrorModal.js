@@ -26,6 +26,8 @@ const ModalOverlay = (props) => {
 
 const ErrorModal = (props) => {
   return (
+    // ReactDOM.createPortal allows you to access the html DOM so that you can render a component
+    // elsewhere on the DOM tree other than the root component div
     <React.Fragment>
       {ReactDOM.createPortal(
         <Backdrop onConfirm={props.onConfirm} />,
