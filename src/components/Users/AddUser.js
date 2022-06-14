@@ -7,6 +7,8 @@ import classes from "./AddUser.module.css";
 import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
+  //Because we now use ref and rely on the default behavior of the input
+  // and grab/manipulate the input of the DOM, the component is uncontrolled
   const nameInputRef = useRef();
   const ageInputRef = useRef();
 
@@ -68,6 +70,7 @@ const AddUser = (props) => {
             type="text"
             // value={enteredUsername}
             // onChange={usernameChangeHandler}
+
             ref={nameInputRef}
           />
           <label htmlFor="age">Age (Years)</label>
